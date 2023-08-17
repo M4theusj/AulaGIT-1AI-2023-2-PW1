@@ -120,6 +120,29 @@ function login(){
            console.log(resultado)
        }
 
+       function media(){
+        var  n1 = parseInt(prompt("Digite um número"))
+        var  n2 = parseInt(prompt("Digite um número"))
+        var  n3 = parseInt(prompt("Digite um número"))
+        //console.log(typeof(n1)) essa função devolve o tipo de variavel 
+        //console.log(typeof(n2))
+        //console.log(typeof(n1))
+        var  resultado = (n1+n2+n3)/3
+           console.log(resultado)
+       }
+
+       function porc(){
+        var  n1 = parseInt(prompt("Digite o número da porcentagem"))
+        var  n2 = parseInt(prompt("Digite um número"))
+        
+        
+        //console.log(typeof(n1)) essa função devolve o tipo de variavel 
+        //console.log(typeof(n2))
+        //console.log(typeof(n1))
+        var  resultado = (n1*n2)/100
+           console.log(resultado)
+       }
+
        
 
     // usando getelementbyid ele retorna uma string!!!
