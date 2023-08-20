@@ -23,16 +23,17 @@ function login(){
     
     }
 }
-    function somar(){
-     var  n1 = parseInt(prompt("Digite o primeiro número"))
-     var n2 = parseInt(prompt("Digite o segundo número"))
-     //console.log(typeof(n1)) essa função devolve o tipo de variavel 
-    //console.log(typeof(n2))
-     //console.log(typeof(n1))
-	 
-     var  resultado = n1 + n2
-        console.log(resultado)
-    }
+    function updateResultado_exi(resultado) {
+        var resultado_exi = document.getElementById("resultado_exi");
+        resultado_exi.textContent = resultado;
+}
+
+    function somar() {
+        var n1 = parseInt(prompt("Digite o primeiro número"));
+        var n2 = parseInt(prompt("Digite o segundo número"));
+        var resultado = n1 + n2;
+        updateResultado_exi("Resultado: " + resultado);
+}
 
     function subtrair(){
         var  n1 = parseInt(prompt("Digite o primeiro número"))
@@ -41,7 +42,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1 - n2
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function dividir(){
@@ -56,7 +57,7 @@ function login(){
         }
         if (n2 != 0){
         var  resultado = n1 / n2
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
     }
 
@@ -67,7 +68,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1 * n2
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function quadrado(){
@@ -77,7 +78,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function cubo(){
@@ -87,7 +88,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function quad(){
@@ -97,7 +98,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1*n1
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function quin(){
@@ -107,7 +108,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1*n1*n1
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function raiz(){
@@ -117,7 +118,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = Math.sqrt(n1);
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function media(){
@@ -128,7 +129,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = (n1+n2+n3)/3
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
 
        function porc(){
@@ -140,8 +141,10 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = (n1*n2)/100
-           console.log(resultado)
+        updateResultado_exi("Resultado: " + resultado);
        }
+
+       
 
        
 
