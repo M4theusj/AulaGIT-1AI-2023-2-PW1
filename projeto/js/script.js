@@ -163,8 +163,13 @@ function login(){
        }
 
        function listar(){
-        const produto = document.getElementById("frmProduto").value
-        document.getElementById("exibe_produto").innerHTML = produto
+        let prod = document.getElementById("frmProduto").value
+        let li = document.createElement("li")
+        li.textContent = prod
+        let listaProd = document.getElementById("listaProd")
+        listaProd.appendChild(li)
+        
+        
         
 
        }
