@@ -27,6 +27,10 @@ function login(){
         var resultado_exi = document.getElementById("resultado_exi");
         resultado_exi.textContent = resultado;
 }
+    function updateResultado_exi2(resultado) {
+        var resultado_exi2 = document.getElementById("resultado_exi2");
+        resultado_exi2.textContent = resultado;
+}
 
     function somar() {
         var n1 = parseInt(prompt("Digite o primeiro número"));
@@ -132,16 +136,19 @@ function login(){
         updateResultado_exi("Resultado: " + resultado);
        }
        function pot(){
-        var  n1 = document.getElementById("n1").value;
-        var  n2 = document.getElementById("n2").value;
-        var result = document.getElementById("result");
-    
         var  n1 = parseInt(prompt("Digite a base"))
         var  n2 = parseInt(prompt("Digite o expoente"))
         var  resultado = Math.pow(n1, n2)
         updateResultado_exi("Resultado: " + resultado);
           
     }
+       function nome(){
+        const nome = document.getElementById("frmNome").value
+        updateResultado_exi2("Nome: " + nome);
+        
+
+
+       }
 
        function porc(){
         var  n1 = parseInt(prompt("Digite o número da porcentagem"))
@@ -153,6 +160,13 @@ function login(){
         //console.log(typeof(n1))
         var  resultado = (n1*n2)/100
         updateResultado_exi("Resultado: " + resultado);
+       }
+
+       function listar(){
+        const produto = document.getElementById("frmProduto").value
+        document.getElementById("exibe_produto").innerHTML = produto
+        
+
        }
 
        

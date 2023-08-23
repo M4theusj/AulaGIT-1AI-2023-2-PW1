@@ -12,6 +12,7 @@
     </header>
     
     <section id="login_ex">
+		<h2>Exemplo 1 - Sistema de Login</h2>
 		<div class="input_01">
 			<input type="email" id="frmemail" placeholder="Insira seu email">
 			<input type="password" id="frmpassword" placeholder="Insira sua senha">
@@ -36,9 +37,43 @@
 		<div id="resultado_exi"></div>
     </section>
 
+	<section id="op_3">
+	<h2>Exemplo 3 - Pegando informações do HTML e inserindo no próprio HTML</h2>
+		<input type="text" id="frmNome"><br/>
+		<div id="resultado_exi2"></div>
+		<button onclick="nome()">Confirmar Nome</button>
+	</section>
+
+	<section id="ex_1">
+		<h2>Exercicio 1 - Adicionando dados em uma lista.</h2>
+			<input type="text" id="frmProduto"><br/>
+			<button onclick="listar()">Confirmar Produto</button>
+		<ul>
+			<li>
+				<p id="exibe_produto"></p>
+			</li>
+		</ul>
+		</section>
+
 </body>
 </html>
 
+<!--innerHTML - exibe resultado
+
+	Desafio: Adicionando dados em uma lista: ( usando ul li resultado li ul ) ( função listar )
+	Criar uma função que adicione, em uma lista, o noeme de um produto. 
+-->
+<!-- VARIAVEIS
+
+var  ( variavel aqui ) * NAO USAR *
+
+let ( mesma coisa que var so que é local, se voce definir ela dentro de uma funçao ela só existe dentro daquela função )
+const ( valor constante, ou seja, não pode ser alterado. Se você não for fazer calculos com a variável, use CONST)
+
+
+
+
+-->
 <!-- a função só é executado quando " alguém " chama ela.-->
 <!--
 			Diferentes Tipos de Botão
