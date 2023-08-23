@@ -131,6 +131,17 @@ function login(){
         var  resultado = (n1+n2+n3)/3
         updateResultado_exi("Resultado: " + resultado);
        }
+       function pot(){
+        var  n1 = document.getElementById("n1").value;
+        var  n2 = document.getElementById("n2").value;
+        var result = document.getElementById("result");
+    
+        var  n1 = parseInt(prompt("Digite a base"))
+        var  n2 = parseInt(prompt("Digite o expoente"))
+        var  resultado = Math.pow(n1, n2)
+        updateResultado_exi("Resultado: " + resultado);
+          
+    }
 
        function porc(){
         var  n1 = parseInt(prompt("Digite o número da porcentagem"))
