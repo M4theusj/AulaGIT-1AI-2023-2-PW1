@@ -34,7 +34,7 @@
         <button onclick="raiz()">Raiz Quadrada</button>
         <button onclick="media()">Média de Três Números</button>
         <button onclick="porc()">Porcentagem</button>
-		<div id="resultado_exi"></div>
+		<input type="text" id="resultado_exi" placeholder="Seu resultado aparecerá aqui!" disabled>
     </section>
 
 	<section id="op_3">
@@ -45,15 +45,16 @@
 	</section>
 
 	<section id="ex_1">
-		<h2>Exercicio 1 - Adicionando dados em uma lista.</h2>
-			<input type="text" id="frmProduto"><br/>
-			<button onclick="listar()">Confirmar Produto</button>
-		<ul id="listaProd">
-			<li>
-				<p id="exibe_produto">Lista de produtos: </p>
-			</li>
-		</ul>
-		</section>
+        <h2>Exercício 1 - Adicionando dados em uma lista.</h2>
+        <div class="input_01">
+            <input type="text" id="frmProduto" placeholder="Insira o nome do produto">
+            <button onclick="listar()">Confirmar Produto</button>
+        </div>
+        <p id="exibe_produto">Lista de produtos</p>
+        <ul id="listaProd">
+            <li>Os produtos aparecerão aqui!</li>
+        </ul>
+    </section>
 
 </body>
 </html>

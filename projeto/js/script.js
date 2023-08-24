@@ -5,7 +5,7 @@
 
 
 function login(){
-    // Criar uma função que pegue o valor de amil e senha e cheque se é igual a login 123456.
+    // Criar uma função que pegue o valor de email e senha e cheque se é igual a login 123456.
     // Se for, exiba a mensagem de login realizado com sucesso.
     // Manipular o DOM
     // Document Object Model
@@ -25,7 +25,7 @@ function login(){
 }
     function updateResultado_exi(resultado) {
         var resultado_exi = document.getElementById("resultado_exi");
-        resultado_exi.textContent = resultado;
+        resultado_exi.value = resultado;
 }
     function updateResultado_exi2(resultado) {
         var resultado_exi2 = document.getElementById("resultado_exi2");
@@ -36,7 +36,7 @@ function login(){
         var n1 = parseInt(prompt("Digite o primeiro número"));
         var n2 = parseInt(prompt("Digite o segundo número"));
         var resultado = n1 + n2;
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
 }
 
     function subtrair(){
@@ -46,7 +46,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1 - n2
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function dividir(){
@@ -57,11 +57,11 @@ function login(){
         //console.log(typeof(n1))
         if (n2 == 0){
             
-            console.log("Não foi possível dividir o primeiro número por zero.")
+            updateResultado_exi("Não foi possível dividir o primeiro número por zero.")
         }
         if (n2 != 0){
         var  resultado = n1 / n2
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
     }
 
@@ -72,7 +72,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1 * n2
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function quadrado(){
@@ -82,7 +82,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function cubo(){
@@ -92,7 +92,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function quad(){
@@ -102,7 +102,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1*n1
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function quin(){
@@ -112,7 +112,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = n1*n1*n1*n1*n1
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function raiz(){
@@ -122,7 +122,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = Math.sqrt(n1);
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function media(){
@@ -133,13 +133,13 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = (n1+n2+n3)/3
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
        function pot(){
         var  n1 = parseInt(prompt("Digite a base"))
         var  n2 = parseInt(prompt("Digite o expoente"))
         var  resultado = Math.pow(n1, n2)
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
           
     }
        function nome(){
@@ -159,7 +159,7 @@ function login(){
         //console.log(typeof(n2))
         //console.log(typeof(n1))
         var  resultado = (n1*n2)/100
-        updateResultado_exi("Resultado: " + resultado);
+        updateResultado_exi(resultado);
        }
 
        function listar(){
@@ -173,6 +173,8 @@ function login(){
         
 
        }
+
+      
 
        
 
