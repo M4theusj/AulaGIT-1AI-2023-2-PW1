@@ -190,39 +190,66 @@ function login(){
 
        }
 
-       function cadastrar(){
+       function atualizarMarcas() {
+        const produtoSelecionado = document.getElementById("prod_nome").value;
+        const marcasSelect = document.getElementById("prod_marca");
+
+        // Limpa as opções anteriores
+        marcasSelect.innerHTML = "";
+
+        if (produtoSelecionado === "Tênis") {
+            // Opções de marcas de tênis
+            const marcas = ["Nike", "Adidas", "Reebok", "Asics", "Olympikus", "Diavolo", "Fila"];
+            adicionarOpcoesMarcas(marcas, marcasSelect);
+        } else if (produtoSelecionado === "Arroz") {
+            // Opções de marcas de arroz
+            const marcas = ["Camil", "Tio João", "Prato Fino"];
+            adicionarOpcoesMarcas(marcas, marcasSelect);
+        } else if (produtoSelecionado === "Feijão") {
+            // Opções de marcas de feijão
+            const marcas = ["Camil", "Kicaldo", "Caldo Bom"];
+            adicionarOpcoesMarcas(marcas, marcasSelect);
+        }
+    }
+
+    // Função para adicionar opções de marca a um select
+    function adicionarOpcoesMarcas(marcas, select) {
+        marcas.forEach(marca => {
+            const option = document.createElement("option");
+            option.value = marca;
+            option.textContent = marca;
+            select.appendChild(option);
+        });
+    }
+
+    function cadastrar() {
         const produto = {
             nome: document.getElementById("prod_nome").value,
             marca: document.getElementById("prod_marca").value,
             preco: document.getElementById("prod_preco").value
-        }
-        //criar um novo elemento LI
-        const lista_item = document.createElement("li")
-        //adcionar conteudo nesse elemento 
-        //Adiciona os elementos dentro do innerHTMl da lista, sem especificar que tipo de elemento eles são
-        // lista_item.innerHTML += produto.nome  
-        // lista_item.innerHTML += produto.marca  
-        // lista_item.innerHTML += produto.preco     
-        // lista_item.innerHTML = ("Marca do produto: " + produto.marca)  
-        // lista_item.innerHTML = ("Preço do produto: " + produto.preco)  
-        const prod_nome = document.createElement("h3")
-        const prod_preco = document.createElement("h4")
-        const prod_marca = document.createElement("p")
+        };
 
+        const lista_item = document.createElement("li");
+        const prod_nome = document.createElement("h3");
+        const prod_preco = document.createElement("h4");
+        const prod_marca = document.createElement("p");
 
-        prod_nome.innerHTML = produto.nome
-        prod_marca.innerHTML = produto.marca
-        prod_preco.innerHTML = produto.preco
+        prod_nome.innerHTML = produto.nome;
+        prod_marca.innerHTML = "Marca do produto: " + produto.marca;
+        prod_preco.innerHTML = "Preço do produto: R$" + produto.preco;
 
-        prod_preco.innerHTML = "R$" + produto.preco
+        lista_item.appendChild(prod_nome);
+        lista_item.appendChild(prod_marca);
+        lista_item.appendChild(prod_preco);
 
-        lista_item.appendChild(prod_nome)
-        lista_item.appendChild(prod_marca)
-        lista_item.appendChild(prod_preco)
-        //Adicionar esse LI no UL
-        document.getElementById("lista_prod").appendChild(lista_item)
-       }
+        document.getElementById("lista_prod").appendChild(lista_item);
+    }
 
+    // Adicione um ouvinte de eventos para atualizar as opções de marca quando o produto é alterado
+    document.getElementById("prod_nome").addEventListener("change", atualizarMarcas);
+
+    // Chame a função de inicialização para preencher as opções de marca com base no valor inicial do produto
+    atualizarMarcas();
        
        
         

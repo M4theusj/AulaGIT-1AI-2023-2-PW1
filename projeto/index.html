@@ -58,13 +58,30 @@
 
 	<section id="op_4">
 		<h2>Exemplo 4 - Adicionando itens ao carrinho. </h2>
-		<input type="text" name="prod_nome" placeholder="Nome do produto" id="prod_nome" class="input_02">
+		<!-- <input type="text" name="prod_nome" placeholder="Nome do produto" id="prod_nome" class="input_02">
 		<input type="text" name="prod_nome" placeholder="Marca do produto" id="prod_marca" class="input_02">
-		<input type="number" name="prod_nome" placeholder="Preço do produto" id="prod_preco" class="input_02">
-		<button onclick="cadastrar()">Cadastrar Produto</button>
+		<input type="number" name="prod_nome" placeholder="Preço do produto" id="prod_preco" class="input_02"> -->
+		<select name="nome" id="prod_nome">
+			<option value="Arroz">Arroz</option>
+			<option value="Feijão">Feijão</option>
+			<option value="Tênis">Tênis</option>
+		</select>
+	
+		<select name="marca" id="prod_marca">
+			<!-- As opções de marca serão preenchidas dinamicamente usando JavaScript. -->
+		</select>
+	
+		<input type="text" id="prod_preco" placeholder="Preço">
+		<button onclick="cadastrar()">Cadastrar</button>
+	
+		
+	
+		<ul id="lista_prod"></ul>
+
+		
 		<ul id="lista_prod">
 			<li>
-				Os produtos cadastrados aparecerão aqui!
+				
 				<h3></h3>
 				<h4></h4>
 				<p></p>
