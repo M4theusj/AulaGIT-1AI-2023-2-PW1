@@ -103,3 +103,7 @@ button:hover {
  
     background-color: green;
 }
+
+#lista_prod li{
+    background-color: red;
+}
