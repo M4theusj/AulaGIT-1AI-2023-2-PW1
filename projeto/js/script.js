@@ -31,6 +31,22 @@ function login(){
         var resultado_exi2 = document.getElementById("resultado_exi2");
         resultado_exi2.textContent = resultado;
 }
+    function nmprod(resultado) {
+    var nmprod = document.getElementById("nmprod");
+    nmprod.textContent = resultado;
+}
+    function prprod(resultado) {
+    var prprod = document.getElementById("prprod");
+    prprod.textContent = resultado;
+}
+    function maprod(resultado) {
+    var maprod = document.getElementById("maprod");
+    maprod.textContent = resultado;
+}
+    function exibecar(resultado) {
+    var exibecar = document.getElementById("exibecar");
+    exibecar.textContent = resultado;
+}
 
     function somar() {
         var n1 = parseInt(prompt("Digite o primeiro número"));
@@ -173,6 +189,105 @@ function login(){
         
 
        }
+
+       function objeto(){
+        let carrinho_de_compras = []
+       // let nome= "arroz"//
+        //let preco = 9.99//
+        //let marca = "tio joão"//
+        //quero juntar tudo em um so, transformamos em objeto//
+        let produto = {
+    
+             nome_prod: "arroz",
+             preco_prod: 6.03,
+             marca_prod: "camil",
+             id: 0o1
+    
+        }
+    
+        
+       
+        let produto2 = {
+    
+            nome_prod: "feijão",
+            preco_prod: 14.35,
+            marca_prod: "camil",
+            id: 0o2
+    
+       }
+    }
+    
+    function prodinfo (){
+        let carrinho_compras = []   
+        let prodnm = document.getElementById("frmProdnm").value
+        let prodpr = document.getElementById("frmProdpr").value
+        let prodma = document.getElementById("frmProdma").value
+
+        carrinho_compras.push(prodnm)
+        carrinho_compras.push(prodpr)
+        carrinho_compras.push(prodma)
+
+        nmprod("O nome do produto adicionado é: " +  carrinho_compras[0])                            
+        prprod("O preço do produto adicionado é: " + carrinho_compras[1])
+        maprod("A marca do produto adicionado é: " + carrinho_compras[2])
+
+        
+    }
+    
+    let carrinho_compras = []; // Mova a declaração do array para o escopo global
+
+    function prodconf() {
+        let prodnm = document.getElementById("frmProdnm").value;
+        let prodma = document.getElementById("frmProdma").value;
+    
+        if (prodnm && prodma) {
+            carrinho_compras.push(prodnm);
+            carrinho_compras.push(prodma);
+    
+            let mensagem = `O ${prodnm} da marca ${prodma} foi adicionado ao carrinho.`;
+            exibecar(mensagem);
+    
+            console.log("Nome adicionado ao carrinho: " + prodnm);
+            console.log("Marca adicionada ao carrinho: " + prodma);
+        } else {
+            exibecar("Por favor, preencha o nome e a marca do produto antes de adicionar ao carrinho.");
+        }
+    }
+    
+    
+
+function prodremv() {
+    if (carrinho_compras.length > 0) {
+        carrinho_compras.pop(); // Remove o último item do array
+        exibecar("O último item foi removido do carrinho.");
+    } else {
+        exibecar("O carrinho está vazio. Não há itens para remover.");
+    }
+}
+
+function exibecar(mensagem) {
+    let exibecarDiv = document.getElementById("exibecar");
+    exibecarDiv.textContent = mensagem;
+}
+
+
+
+    
+    
+
+    
+    
+    
+       
+    
+    
+       
+        //  console.log(carrinho_de_compras)
+        //  console.log(carrinho_de_compras[0])
+        
+
+        
+        
 
       
 

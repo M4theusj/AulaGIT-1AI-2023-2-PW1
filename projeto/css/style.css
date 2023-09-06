@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #696969;
@@ -47,6 +47,13 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    
+}
+.input_02 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #C0C0C0;
 }
 
 .input_01 input {
@@ -82,4 +89,9 @@ button:hover {
     max-width: 200px;
     margin: 0 auto;
      
+}
+
+#btcar {
+ 
+    background-color: green;
 }
