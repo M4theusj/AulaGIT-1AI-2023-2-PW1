@@ -190,6 +190,53 @@ function login(){
 
        }
 
+       function array_exemplo(){
+        let n = [3, 4, 5, 6, 2, 1]
+        console.log("Esse console log mostra o array completo " + n)
+        console.log("Esse console log mostra o valor no índice 0 do array " + n[0])
+        console.log("Esse console log mostra o valor no índice 6 do array " + n[6])
+        n[6] = "7"
+        console.log("Esse console log mostra o valor no índice 6 do array " + n[6])
+        console.log("Esse console log mostra o array completo ")
+        console.log(n)
+        n.push(50)
+        n.push(32)
+        n.push(33)
+        console.log("Esse console log mostra o array completo ")
+        console.log(n)
+        n.pop()
+        console.log("Esse console log mostra o array completo ")
+        console.log(n)
+        
+       }
+
+       function objeto(){
+        //Produtos
+        let carrinho_de_compras = []
+        // let nome = "Arroz"
+        // let preco = 9.99
+        // let marca = "Tio João"
+
+        let produto = {
+            nome_prod: "Arroz",
+            preco_prod: 9.99,
+            marca_prod: "Tio João"
+        }
+        carrinho_de_compras.push(produto);
+        
+        let produto2 = {
+            nome_prod: "Feijão",
+            preco_prod: 7.35,
+            marca_prod: "Namorado"
+        }
+        carrinho_de_compras.push(produto2);
+
+        console.log(carrinho_de_compras)
+        console.log(carrinho_de_compras[0].nome_prod)
+       }
+
+
+
        function objeto(){
         let carrinho_de_compras = []
        // let nome= "arroz"//
@@ -296,3 +343,7 @@ function exibecar(mensagem) {
        
 
     // usando getelementbyid ele retorna uma string!!!
+    // let n1[] = [3, 4, 5, 6, 2, 1] tudo que está dentro de um array é um conjunto de elementos do mesmo tipo.
+    // push(n) adiciona n a uma "pilha".
+    // pop() tira o ultimo numero da pilha.
+    // splice() remove um determinado numero da pilha.
