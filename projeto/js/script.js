@@ -190,147 +190,36 @@ function login(){
 
        }
 
-       function array_exemplo(){
-        let n = [3, 4, 5, 6, 2, 1]
-        console.log("Esse console log mostra o array completo " + n)
-        console.log("Esse console log mostra o valor no índice 0 do array " + n[0])
-        console.log("Esse console log mostra o valor no índice 6 do array " + n[6])
-        n[6] = "7"
-        console.log("Esse console log mostra o valor no índice 6 do array " + n[6])
-        console.log("Esse console log mostra o array completo ")
-        console.log(n)
-        n.push(50)
-        n.push(32)
-        n.push(33)
-        console.log("Esse console log mostra o array completo ")
-        console.log(n)
-        n.pop()
-        console.log("Esse console log mostra o array completo ")
-        console.log(n)
-        
+       function cadastrar(){
+        const produto = {
+            nome: document.getElementById("prod_nome").value,
+            marca: document.getElementById("prod_marca").value,
+            preco: document.getElementById("prod_preco").value
+        }
+        //criar um novo elemento LI
+        const lista_item = document.createElement("li")
+        //adcionar conteudo nesse elemento 
+        //Adiciona os elementos dentro do innerHTMl da lista, sem especificar que tipo de elemento eles são
+        // lista_item.innerHTML += produto.nome  
+        // lista_item.innerHTML += produto.marca  
+        // lista_item.innerHTML += produto.preco     
+        // lista_item.innerHTML = ("Marca do produto: " + produto.marca)  
+        // lista_item.innerHTML = ("Preço do produto: " + produto.preco)  
+        const prod_nome = document.createElement("h3")
+        const prod_preco = document.createElement("h4")
+        const prod_marca = document.createElement("p")
+        prod_nome.innerHTML = produto.nome
+        prod_marca.innerHTML = produto.marca
+        prod_preco.innerHTML = produto.preco
+        lista_item.appendChild(prod_nome)
+        lista_item.appendChild(prod_marca)
+        lista_item.appendChild(prod_preco)
+        //Adicionar esse LI no UL
+        document.getElementById("lista_prod").appendChild(lista_item)
        }
 
-       function objeto(){
-        //Produtos
-        let carrinho_de_compras = []
-        // let nome = "Arroz"
-        // let preco = 9.99
-        // let marca = "Tio João"
-
-        let produto = {
-            nome_prod: "Arroz",
-            preco_prod: 9.99,
-            marca_prod: "Tio João"
-        }
-        carrinho_de_compras.push(produto);
-        
-        let produto2 = {
-            nome_prod: "Feijão",
-            preco_prod: 7.35,
-            marca_prod: "Namorado"
-        }
-        carrinho_de_compras.push(produto2);
-
-        console.log(carrinho_de_compras)
-        console.log(carrinho_de_compras[0].nome_prod)
-       }
-
-
-
-       function objeto(){
-        let carrinho_de_compras = []
-       // let nome= "arroz"//
-        //let preco = 9.99//
-        //let marca = "tio joão"//
-        //quero juntar tudo em um so, transformamos em objeto//
-        let produto = {
-    
-             nome_prod: "arroz",
-             preco_prod: 6.03,
-             marca_prod: "camil",
-             id: 0o1
-    
-        }
-    
-        
        
-        let produto2 = {
-    
-            nome_prod: "feijão",
-            preco_prod: 14.35,
-            marca_prod: "camil",
-            id: 0o2
-    
-       }
-    }
-    
-    function prodinfo (){
-        let carrinho_compras = []   
-        let prodnm = document.getElementById("frmProdnm").value
-        let prodpr = document.getElementById("frmProdpr").value
-        let prodma = document.getElementById("frmProdma").value
-
-        carrinho_compras.push(prodnm)
-        carrinho_compras.push(prodpr)
-        carrinho_compras.push(prodma)
-
-        nmprod("O nome do produto adicionado é: " +  carrinho_compras[0])                            
-        prprod("O preço do produto adicionado é: " + carrinho_compras[1])
-        maprod("A marca do produto adicionado é: " + carrinho_compras[2])
-
-        
-    }
-    
-    let carrinho_compras = []; // Mova a declaração do array para o escopo global
-
-    function prodconf() {
-        let prodnm = document.getElementById("frmProdnm").value;
-        let prodma = document.getElementById("frmProdma").value;
-    
-        if (prodnm && prodma) {
-            carrinho_compras.push(prodnm);
-            carrinho_compras.push(prodma);
-    
-            let mensagem = `O ${prodnm} da marca ${prodma} foi adicionado ao carrinho.`;
-            exibecar(mensagem);
-    
-            console.log("Nome adicionado ao carrinho: " + prodnm);
-            console.log("Marca adicionada ao carrinho: " + prodma);
-        } else {
-            exibecar("Por favor, preencha o nome e a marca do produto antes de adicionar ao carrinho.");
-        }
-    }
-    
-    
-
-function prodremv() {
-    if (carrinho_compras.length > 0) {
-        carrinho_compras.pop(); // Remove o último item do array
-        exibecar("O último item foi removido do carrinho.");
-    } else {
-        exibecar("O carrinho está vazio. Não há itens para remover.");
-    }
-}
-
-function exibecar(mensagem) {
-    let exibecarDiv = document.getElementById("exibecar");
-    exibecarDiv.textContent = mensagem;
-}
-
-
-
-    
-    
-
-    
-    
-    
        
-    
-    
-       
-        //  console.log(carrinho_de_compras)
-        //  console.log(carrinho_de_compras[0])
         
 
         

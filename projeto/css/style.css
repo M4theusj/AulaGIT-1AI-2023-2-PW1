@@ -43,11 +43,25 @@ button:hover {
     background-color: #555;
 }
 
+
 .input_01 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    
 }
+
+.input_02 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: #C0C0C0;
+    
+}
+
+
 
 .input_01 input {
     padding: 5px;
