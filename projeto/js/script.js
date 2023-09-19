@@ -227,24 +227,31 @@ function login(){
             nome: document.getElementById("prod_nome").value,
             marca: document.getElementById("prod_marca").value,
             preco: document.getElementById("prod_preco").value
-        };
-
-        const lista_item = document.createElement("li");
-        const prod_nome = document.createElement("h3");
-        const prod_preco = document.createElement("h4");
-        const prod_marca = document.createElement("p");
-
+        }
+    
+        const lista_item = document.createElement("li")
+        const prod_nome = document.createElement("h3")
+        const prod_preco = document.createElement("h4")
+        const prod_marca = document.createElement("p")
+    
         prod_nome.innerHTML = produto.nome;
-        prod_marca.innerHTML = "Marca do produto: " + produto.marca;
-        prod_preco.innerHTML = "Preço do produto: R$" + produto.preco;
-
-        lista_item.appendChild(prod_nome);
-        lista_item.appendChild(prod_marca);
-        lista_item.appendChild(prod_preco);
-
+        prod_marca.innerHTML = "Marca do produto: " + produto.marca
+        prod_preco.innerHTML = "Preço do produto: R$" + produto.preco
+    
+        lista_item.appendChild(prod_nome)
+        lista_item.appendChild(prod_marca)
+        lista_item.appendChild(prod_preco)
+    
         document.getElementById("lista_prod").appendChild(lista_item);
+    
+        
+        document.getElementById("prod_nome").value = ""
+        document.getElementById("prod_marca").value = ""
+        document.getElementById("prod_preco").value = ""
     }
+    
 
+    
     // Adicione um ouvinte de eventos para atualizar as opções de marca quando o produto é alterado
     document.getElementById("prod_nome").addEventListener("change", atualizarMarcas);
 
