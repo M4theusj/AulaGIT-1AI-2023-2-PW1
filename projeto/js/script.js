@@ -252,11 +252,7 @@ function login(){
     
 
     
-    // Adicione um ouvinte de eventos para atualizar as opções de marca quando o produto é alterado
-    document.getElementById("prod_nome").addEventListener("change", atualizarMarcas);
-
-    // Chame a função de inicialização para preencher as opções de marca com base no valor inicial do produto
-    atualizarMarcas();
+    
        
        
         
