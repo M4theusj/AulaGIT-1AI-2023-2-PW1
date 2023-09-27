@@ -249,23 +249,52 @@ function login(){
         document.getElementById("prod_marca").value = ""
         document.getElementById("prod_preco").value = ""
     }
-    
 
-    
-    
-       
-       
-        
+    function Nome(param1, param2){
+        //Código
+        return
+    }
 
-        
-        
+    (param1, param2) => {
+        //Código
+        return
+    }
+    
+    () => {   }
+    
+    
+    //Função Map
+    //Array = [    ]
+    //Objeto Produto = { foto, modelo, preço, qtd em estoque, nome, código }
+       
+    const numeros = [ 5, 48, 65, 33, 12, 79, 8, 44 ]
+    const novoNumeros  = []  
+    numeros.map( (num) => { 
+        novoNumeros.push(num * 2)
+
+    } )
+
+    console.log("Arrow function array01: " + numeros)
+    console.log("Arrow function array01: " + novoNumeros)
+    
+    const numbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+    const result = []
+    numbers.map( (par) => { 
+        if ( par % 2 === 0 ){
+            result.push(par)
+        }
+    } )
+
+    console.log("Arrow function exercício pares: " + numbers)
+    console.log("Arrow function exercício pares: " + result)
+
 
       
 
        
-
-       
-
+     
+    // Pesquisar filtros       
+    // Para cada elemento do array executa a função dentro do .map
     // usando getelementbyid ele retorna uma string!!!
     // let n1[] = [3, 4, 5, 6, 2, 1] tudo que está dentro de um array é um conjunto de elementos do mesmo tipo.
     // push(n) adiciona n a uma "pilha".
